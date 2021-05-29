@@ -1,5 +1,7 @@
 public class Caesar {
 
+    private static String plainText;
+    private int shift;
     public static String encrypt(String plainText , int shift){
             if (shift > 26){
                 shift = shift%26;
