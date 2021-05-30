@@ -8,4 +8,10 @@ public class CaesarTest {
         Caesar caesar =new Caesar();
         assertEquals(" nbe",caesar.encrypt("mad",1));
     }
+
+    @Test
+    public void Caesar_testingDecryptingMethod() {
+        Caesar caesar =new Caesar();
+        assertEquals(" mad",caesar.decrypt("nbe",1));
+    }
 }

@@ -7,7 +7,7 @@ public class App {
         System.out.println("This is code Caesar cipher");
 
         for( ;; ){
-            System.out.println("choice\n 1.Encrypt\n 3.Exit");
+            System.out.println("choice\n 1.Encrypt\n 2.Decrypt\n 3.Exit");
             int choice = scanner.nextInt();
             Caesar caesar =new Caesar();
             if(choice == 1){
@@ -16,7 +16,14 @@ public class App {
                 message = scanner.next();
                 System.out.println("Enter Key");
                 int shift = scanner.nextInt();
-                System.out.println(Caesar.encrypt(message, shift));
+                System.out.println(caesar.encrypt(message, shift));
+            }else if (choice == 2){
+                System.out.println("Enter a word or sentence to Decrypt:");
+                String message = new String();
+                message = scanner.next();
+                System.out.println("Enter Key");
+                int shift = scanner.nextInt();
+                System.out.println(caesar.decrypt(message, shift));
             }else if (choice == 3) {
                 System.exit(0);
             }else {
